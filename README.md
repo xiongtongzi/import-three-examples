@@ -39,6 +39,6 @@ let controls = new OrbitControls(camera, el)
 let fbx = new FBXLoader()
 
 fbx.load(url, function (_obj) {
-  console.log(obj)
+  console.log(_obj)
 })
 ```
