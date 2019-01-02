@@ -5,6 +5,8 @@ this is webpack plugin, It was created to solve the problem of threeJs modular d
 <br/>
 `npm i improt-three-examples --save-dev`
 
+国内用户使用cnpm下载
+
 ## webpack config
 ```
 const ThreeExamples = require('improt-three-examples')
