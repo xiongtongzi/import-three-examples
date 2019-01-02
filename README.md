@@ -41,4 +41,7 @@ let fbx = new FBXLoader()
 fbx.load(url, function (_obj) {
   console.log(_obj)
 })
+
+......
+......
 ```
