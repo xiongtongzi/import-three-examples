@@ -5,7 +5,7 @@ this is webpack plugin, It was created to solve the problem of threeJs modular d
 <br/>
 `npm i improt-three-examples --save-dev`
 
-国内用户使用cnpm下载
+国内用户如果npm下载卡住,请更换成cnpm下载
 
 ## webpack config
 ```
