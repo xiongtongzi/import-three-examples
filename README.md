@@ -48,7 +48,7 @@ fbx.load(url, function (_obj) {
 ......
 ```
 
-# vue-cli 3.0+ 的webpack配置:
+## vue-cli 3.0+ 的webpack配置:
 vue.config.js
 ```
 const ThreeExamples = require('improt-three-examples')
