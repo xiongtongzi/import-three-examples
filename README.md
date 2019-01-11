@@ -1,3 +1,4 @@
+
 # import-three-examples
 this is webpack plugin, It was created to solve the problem of threeJs modular development.
 
@@ -48,7 +49,7 @@ fbx.load(url, function (_obj) {
 ......
 ```
 
-## vue-cli 3.0+ 的webpack配置:
+## 2019/01/11 vue-cli 3.0+ 的webpack配置:
 vue.config.js
 ```
 const ThreeExamples = require('import-three-examples')
