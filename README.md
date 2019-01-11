@@ -47,3 +47,29 @@ fbx.load(url, function (_obj) {
 ......
 ......
 ```
+
+# vue-cli 3.0+ 的webpack配置:
+vue.config.js
+```
+const ThreeExamples = require('improt-three-examples')
+
+module.exports = {
+    chainWebpack: config => {
+        ThreeExamples.forEach((v) => {
+            if (~v.use.indexOf('imports')) {
+                config.module
+                    .rule(`${v.test}_i`)
+                    .test(require.resolve(v.test))
+                    .use(v.use)
+                    .loader(v.use)
+            } else {
+                config.module
+                    .rule(`${v.test}_e`)
+                    .test(require.resolve(v.test))
+                    .use(v.use)
+                    .loader(v.use)
+            }
+        })
+    }
+}
+```
