@@ -51,6 +51,14 @@ let baseArr = [
 ]
 let specialArr = [
     {
+        name: 'FBXLoader',
+        path: 'three/examples/js/loaders/FBXLoader',
+        lib: [{
+            name: 'Zlib',
+            path: 'import-three-examples/src/Zlib.js'
+        }]
+    },
+    {
         name: 'CTMLoader',
         path: 'three/examples/js/loaders/ctm/CTMLoader',
         install: [{

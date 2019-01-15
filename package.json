@@ -1,18 +1,26 @@
 {
-  "name": "improt-three-examples",
-  "version": "2.0.1",
-  "description": "Modular import threeJs plugin",
+  "name": "import-three-examples",
+  "version": "2.1.5",
+  "description": "three-examples",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiongtongzi/import-three-examples.git"
+  },
   "keywords": [
+    "vue",
     "three",
     "loader",
     "webpack",
-    "vue",
     "react"
   ],
   "author": "xiongtongzi",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiongtongzi/import-three-examples/issues"
+  },
+  "homepage": "https://github.com/xiongtongzi/import-three-examples#readme"
 }

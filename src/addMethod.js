@@ -35,6 +35,14 @@ function recursion (arr, use, path, target) {
 function addSpecial (arr) {
     var a = []
     arr.forEach((v, i) => {
+        if (v.lib && v.lib.length > 0) {
+            v.lib.forEach((v1, i1) => {
+                a.push({
+                    test: require.resolve(`${v.path}`),
+                    use: `imports-loader?${v1.name}=${v1.path}`
+                })
+            })
+        }
         if (v.install && v.install.length > 0) {
             recursion(v.install, `imports-loader?THREE=three`, v.path, a)
         } else {
