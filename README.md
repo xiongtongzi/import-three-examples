@@ -1,5 +1,7 @@
 # improt-three-examples
 this is webpack plugin, It was created to solve the problem of threeJs modular development.
+不会额外增大打包之后得文件体积!原项目webpack结构无需改动!
+no big!no change!
 
 `npm i imports-loader exports-loader --save-dev`
 <br/>
