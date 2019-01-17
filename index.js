@@ -21,6 +21,6 @@ let threeExamples = [
     ...require('./src/renderers'),
     ...require('./src/shaders'),
     ...require('./src/utils'),
-    // ...require('./src/vr')
+    ...require('./src/libs')
 ]
 module.exports = threeExamples
