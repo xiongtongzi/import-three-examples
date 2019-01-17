@@ -75,3 +75,23 @@ module.exports = {
     }
 }
 ```
+
+## nuxt 中的配置
+
+```
+const ThreeExamples = require('import-three-examples')
+
+module.exports = {
+  build: {
+    extend(config, ctx) {
+      ThreeExamples.forEach((v, i) => {
+        config.module.rules.push({
+          test: require.resolve(v.test.split('node_modules\\')[1]),
+          use: v.use
+        })
+      })
+    }
+  }
+}
+```
+
