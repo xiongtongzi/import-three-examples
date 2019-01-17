@@ -50,7 +50,7 @@ fbx.load(url, function (_obj) {
 ......
 ```
 
-## vue-cli 3.0+ 的webpack配置:
+## 2019/01/11 vue-cli 3.0+ 的webpack配置:
 vue.config.js
 ```
 const ThreeExamples = require('import-three-examples')
@@ -76,7 +76,7 @@ module.exports = {
 }
 ```
 
-## nuxt 中的配置
+## 2019/01/17  nuxt 中的配置
 
 ```
 const ThreeExamples = require('import-three-examples')
