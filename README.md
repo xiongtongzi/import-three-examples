@@ -1,3 +1,4 @@
+https://img.shields.io/badge/version-2.1.6-blue.svg
 # improt-three-examples
 this is webpack plugin, It was created to solve the problem of threeJs modular development.  
 不会额外增大打包之后得文件体积!原项目webpack结构无需改动!  
