@@ -77,7 +77,7 @@ module.exports = {
 ```
 
 ## 2019/01/17  nuxt 中的配置
-
+nuxt.config.js
 ```
 const ThreeExamples = require('import-three-examples')
 
