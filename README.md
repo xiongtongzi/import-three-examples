@@ -101,14 +101,15 @@ module.exports = {
 结果都是因为引入了本地模型，但是未对模型设置webpack加载器  
 下面用fbx和obj模型作为例子,教大家怎么对模型设置webpack加载器。其他格式的模型/\.(fbx|obj)$/中的fbx和obj替换成你们需要的模型，多种格式间用 | 衔接  
 首先一定要cnpm i url-loader --save-dev (如果模型太大可以使用flie-loader)!!!!!!!!!!  
+本地的静态资源我建议是最好用import引入，再不济也需要用require(),直接写相对路径如果不熟悉webpack配置很容易造成dev静态资源引入正常但build资源却404
 ### webpack
 同样是在module.rules 中添加
 ```
-  {
-    test: /\.(fbx|obj)$/,
-    loader: 'url-loader'
-  },
-  (下面就是最上面对应的引入插件的方法)
+{
+  test: /\.(fbx|obj)$/,
+  loader: 'url-loader'
+},
+(下面就是最上面对应的引入插件的方法)
 ```
 ### vue-cli 3.0
 vue.config.js
@@ -119,10 +120,20 @@ module.exports = {
     chainWebpack: config => {
         config.module
             .rule('obj')
-            .test(/\.(obj|fbx)$/)
+            .test(/\.(fbx|obj)$/)
             .use('file-loader')
             .loader('file-loader')
             (下面就是最上面对应的引入插件的方法)
     }
+}
+```
+### nuxt 3.0
+```
+extend(config, ctx) {
+  config.module.rules.push( {
+    test: /\.(fbx|obj)(\?.*)?$/,
+    loader: 'url-loader',
+  })
+   (下面就是最上面对应的引入插件的方法)
 }
 ```
