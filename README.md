@@ -96,3 +96,33 @@ module.exports = {
 }
 ```
 
+## 2019/03/08  说明一下(仅针对webpack不太熟的童靴)
+最近很多人反馈这个插件怎么不起作用啊  
+结果都是因为引入了本地模型，但是未对模型设置webpack加载器  
+下面用fbx和obj模型作为例子,教大家怎么对模型设置webpack加载器。其他格式的模型/\.(fbx|obj)$/中的fbx和obj替换成你们需要的模型，多种格式间用 | 衔接  
+首先一定要cnpm i url-loader --save-dev (如果模型太大可以使用flie-loader)!!!!!!!!!!  
+### webpack
+同样是在module.rules 中添加
+```
+  {
+    test: /\.(fbx|obj)$/,
+    loader: 'url-loader'
+  },
+  (下面就是最上面对应的引入插件的方法)
+```
+### vue-cli 3.0
+vue.config.js
+```
+const ThreeExamples = require('import-three-examples')
+
+module.exports = {
+    chainWebpack: config => {
+        config.module
+            .rule('obj')
+            .test(/\.(obj|fbx)$/)
+            .use('file-loader')
+            .loader('file-loader')
+            (下面就是最上面对应的引入插件的方法)
+    }
+}
+```
