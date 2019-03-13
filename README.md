@@ -144,11 +144,11 @@ extend(config, ctx) {
 结果看了源码，需要'THREE' in window && 'LegacyJSONLoader' in THREE 才行  
 解决办法如下  
 ```
-  window.THREE = {}
-  import * as THREE from 'imports-loader?THREE\.LegacyJSONLoader=three/examples/js/loaders/deprecated/LegacyJSONLoader!three'
-  
-  var loader = new THREE.ObjectLoader();
-  loader.load(url, (o) => {
-    console.log(0)
-  });
+window.THREE = {}
+import * as THREE from 'imports-loader?THREE\.LegacyJSONLoader=three/examples/js/loaders/deprecated/LegacyJSONLoader!three'
+
+var loader = new THREE.ObjectLoader();
+loader.load(url, (o) => {
+  console.log(0)
+});
 ```
