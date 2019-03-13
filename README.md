@@ -149,6 +149,6 @@ import * as THREE from 'imports-loader?THREE\.LegacyJSONLoader=three/examples/js
 
 var loader = new THREE.ObjectLoader();
 loader.load(url, (o) => {
-  console.log(0)
+  console.log(o)
 });
 ```
