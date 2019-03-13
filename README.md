@@ -137,3 +137,18 @@ extend(config, ctx) {
    (下面就是最上面对应的引入插件的方法)
 }
 ```
+
+## 2019/03/13  关于引入LegacyJSONLoader的问题
+直接引入LegacyJSONLoader加载json格式的模型,会报错让THREE.ObjectLoader
+直接使用THREE.ObjectLoader，又会报错需要LegacyJSONLoader来帮加载某个对象
+结果看了源码，需要'THREE' in window && 'LegacyJSONLoader' in THREE 才行
+解决办法如下
+```
+  window.THREE = {}
+  import * as THREE from 'imports-loader?THREE\.LegacyJSONLoader=three/examples/js/loaders/deprecated/LegacyJSONLoader!three'
+  
+  var loader = new THREE.ObjectLoader();
+  loader.load(url, (o) => {
+    console.log(0)
+  });
+```
