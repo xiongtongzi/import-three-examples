@@ -1,6 +1,6 @@
 /*
 *   lib config
-*   time: 2018/1/17
+*   time: 2019/1/17
 *   author: xiongtongzi
 * */
 
@@ -14,5 +14,13 @@ module.exports = [
     {
         test: require.resolve('three/examples/js/libs/stats.min.js'),
         use: 'exports-loader?Stats'
+	},
+	{
+        test: require.resolve('three/examples/js/libs/stats.min.js'),
+        use: 'exports-loader?TWEEN'
+	},
+	{
+        test: require.resolve('three/examples/js/libs/stats.min.js'),
+        use: 'imports-loader?THREE=three'
 	}
 ]
