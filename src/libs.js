@@ -1,7 +1,7 @@
 /*
  *   lib config
- *   time: 2019/1/17
- *   author: xiongtongzi
+ *   updatetime: 2019/4/28
+ *   author: kuangyazhou
  * */
 
 const addMethod = require('./addMethod')
