@@ -33,7 +33,7 @@ let baseArr = [
     'ShaderTranslucent',
     'SimplexNoise',
     'TimelinerController',
-    'TypedArrayUtils',
+    // 'TypedArrayUtils',
     // 'UCSCharacter',
     'Volume',
     'VolumeSlice',
