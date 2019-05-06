@@ -126,7 +126,7 @@ module.exports = {
     }
 }
 ```
-### nuxt 3.0
+### nuxt
 ```
 extend(config, ctx) {
   config.module.rules.push( {
