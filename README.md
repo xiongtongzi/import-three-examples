@@ -99,7 +99,7 @@ module.exports = {
 最近很多人反馈这个插件怎么不起作用啊  
 结果都是因为引入了本地模型，但是未对模型设置webpack加载器  
 下面用fbx和obj模型作为例子,教大家怎么对模型设置webpack加载器。其他格式的模型/\.(fbx|obj)$/中的fbx和obj替换成你们需要的模型，多种格式间用 | 衔接  
-首先一定要cnpm i url-loader --save-dev (如果模型太大可以使用flie-loader)!!!!!!!!!!  
+首先一定要cnpm i url-loader --save-dev (如果模型太大可以使用file-loader)!!!!!!!!!!  
 本地的静态资源我建议是最好用import引入，再不济也需要用require(),直接写相对路径如果不熟悉webpack配置很容易造成dev静态资源引入正常但build资源却404
 ### webpack
 同样是在module.rules 中添加
