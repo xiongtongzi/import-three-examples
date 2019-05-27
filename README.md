@@ -152,7 +152,7 @@ loader.load(url, (o) => {
 });
 ```
 
-## 2019/03/13  关于引入DRACOLoader的问题
+## 2019/05/27  关于引入DRACOLoader的问题
 关于设置DRACOLoader.setDecoderPath路径的问题
 
 ```
