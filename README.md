@@ -151,3 +151,18 @@ loader.load(url, (o) => {
   console.log(o)
 });
 ```
+
+## 2019/03/13  关于引入DRACOLoader的问题
+关于设置DRACOLoader.setDecoderPath路径的问题
+
+```
+import DRACOLoader from 'imports-loader?DracoDecoderModule=three/examples/js/libs/draco/draco_decoder.js!three/examples/js/loaders/DRACOLoader'
+DRACOLoader.setDecoderPath("../libs/draco")
+drcLoader.load(url, function (geometry) {
+    var material = new THREE.MeshStandardMaterial( { color: 0x606060 } );
+    var mesh = new THREE.Mesh( geometry, material );
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    scene.add( mesh );
+})
+```
