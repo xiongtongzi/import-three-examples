@@ -167,6 +167,6 @@ drcLoader.load(url, function (geometry) {
 })
 ```
 
-## 2019/06/11 由于three已经填补了模块化引入的空缺,自带的jsm目录的文件应该是更好的解决方案，本项目停止维护了
+## 2019/06/11 由于three逐渐完善了jsm目录的文件应该是更好的模块化开发解决方案，本项目停止维护
 
 地址: https://github.com/mrdoob/three.js/tree/dev/examples/jsm
