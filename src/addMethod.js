@@ -43,7 +43,7 @@ function addSpecial(arr) {
             v.lib.forEach((v1, i1) => {
                 try {
                     a.push({
-                        test: require.resolve(`${path}${v}`),
+                        test: require.resolve(`${v.path}`),
                         use: `imports-loader?${v1.name}=${v1.path}`
                     })
                 } catch (e) {
@@ -56,7 +56,7 @@ function addSpecial(arr) {
         } else {
             try {
                 a.push({
-                    test: require.resolve(`${path}${v}`),
+                    test: require.resolve(`${v.path}`),
                     use: "imports-loader?THREE=three"
                 })
             } catch (e) {
@@ -65,7 +65,7 @@ function addSpecial(arr) {
         }
         try {
             a.push({
-                test: require.resolve(`${path}${v}`),
+                test: require.resolve(`${v.path}`),
                 use: `exports-loader?THREE.${v.name}`
             })
         } catch (e) {
