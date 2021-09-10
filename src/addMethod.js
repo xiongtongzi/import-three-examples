@@ -1,7 +1,7 @@
 /*
  *   add methods
  *   time: 2019/06/03
- *   author: kuangyazhou
+ *   author: xiongtongzi
  * */
 
 function addBase(path, arr) {
